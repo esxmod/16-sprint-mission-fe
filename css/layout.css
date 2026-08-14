@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary100: #3692ff;
+  --color-coolgray100: #f3f4f6;
+
+  --color-secondary50: #f9fafb;
+  --color-secondary200: #e5e7eb;
+  --color-secondary400: #9ca3af;
+  --color-secondary700: #374151;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Pretendard";
+}
+
+img {
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+}
+
+header .header-wrapper {
+  width: 100%;
+  margin: 0.5rem 200px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  height: 160px;
+
+  background-color: #111827;
+}
+
+footer .footer-wrapper {
+  margin: 0 200px;
+  padding-top: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .copyright {
+  color: var(--color-secondary400);
+
+  font-size: 1rem;
+}
+
+footer .menu {
+  color: var(--color-secondary200);
+
+  font-size: 1rem;
+
+  display: flex;
+
+  & > li {
+    margin: 0 1rem;
+  }
+}
+
+footer .sns-icon {
+  color: #fff;
+
+  display: flex;
+
+  & > li {
+    margin: 0 0.5rem;
+  }
+}
+
+.section-a {
+  height: 540px;
+  background-color: #cfe5ff;
+}
+
+.section-b {
+  height: 720px;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-wrapper {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.section-a .section-wrapper {
+  align-items: flex-end;
+}
+
+.section-b .section-wrapper {
+  align-items: center;
+  height: 444px;
+
+  background-color: #fcfcfc;
+}
+
+.section-top {
+  /* 540 + 80 */
+  height: 620px;
+  /* nav height */
+  padding-top: 80px;
+
+  & .title {
+    margin-bottom: 2rem;
+  }
+
+  & .panel-right {
+    height: 340px;
+  }
+}
+
+.section-bottom {
+  & .title {
+    margin-right: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  & .panel-right {
+    height: 397px;
+  }
+}
+
+.section-b {
+  & .title {
+    text-align: right;
+    margin: 2rem 0;
+  }
+
+  & .description {
+    text-align: right;
+  }
+
+  & .panel-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin: 0 4rem;
+    max-width: 300px;
+  }
+
+  & .panel-right {
+    height: 444px;
+  }
+}
+
+.section1 .section-wrapper,
+.section3 .section-wrapper {
+  flex-direction: row-reverse;
+
+  & .title,
+  & .description {
+    text-align: left;
+  }
+
+  & .panel-left {
+    align-items: flex-start;
+  }
+}
+
+.badge {
+  color: var(--color-primary100);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.title {
+  color: var(--color-secondary700);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.description {
+  color: var(--color-secondary700);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+  word-break: keep-all;
+}
+
+.button {
+  background-color: var(--color-primary100);
+  color: var(--color-coolgray100);
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.btn-login {
+  /* padding 으로 버튼 사이즈를 조절해야 할까? 아니면 width 로 고정? */
+  padding: 1rem 3rem;
+
+  border-radius: var(--radius-md);
+
+  font-size: 1rem;
+}
+
+.btn-goto {
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 40px;
+  padding: 1rem 0.5rem;
+
+  margin-bottom: 8rem;
+}
