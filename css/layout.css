@@ -5,11 +5,13 @@
 :root {
   --color-primary100: #3692ff;
   --color-coolgray100: #f3f4f6;
+  --color-coolgray800: #1f2937;
 
   --color-secondary50: #f9fafb;
   --color-secondary200: #e5e7eb;
   --color-secondary400: #9ca3af;
   --color-secondary700: #374151;
+  --color-secondary800: #1f2937;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -20,6 +22,10 @@
 html {
   font-size: 16px;
   font-family: "Pretendard";
+}
+
+body {
+  background-color: #fcfcfc;
 }
 
 img {
@@ -61,7 +67,7 @@ footer .footer-wrapper {
   justify-content: space-between;
 }
 
-.logo {
+header .logo {
   height: 50px;
 
   display: flex;
@@ -245,4 +251,128 @@ footer .sns-icon {
   padding: 1rem 0.5rem;
 
   margin-bottom: 8rem;
+}
+
+.login-wrapper {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 5% 0;
+}
+
+.login {
+  display: flex;
+
+  width: 640px;
+  flex-direction: column;
+  align-items: center;
+
+  & .logo {
+    height: 132px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2.5rem;
+  }
+
+  & form {
+    width: 100%;
+
+    & label {
+      color: var(--color-secondary800);
+
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    & input {
+      width: 100%;
+      height: 56px;
+      padding: 16px 24px;
+
+      background-color: var(--color-coolgray100);
+      color: var(--color-coolgray800);
+
+      border-radius: 12px;
+      border: none;
+
+      font-size: 1rem;
+      font-weight: 400;
+
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    & input::placeholder {
+      color: var(--color-secondary400);
+    }
+
+    & input:focus {
+      outline: none;
+      border: 1px #3692ff solid;
+    }
+
+    & button {
+      width: 100%;
+      border: none;
+      padding: 1rem auto;
+
+      background-color: var(--color-secondary400);
+      border-radius: var(--radius-pill);
+
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    /* active ? */
+    & button:hover {
+      background-color: var(--color-primary100);
+    }
+  }
+
+  & .login-oauth {
+    width: 100%;
+    height: 74px;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background-color: #e6f2ff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .login-oauth-text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-secondary800);
+    }
+
+    & .login-oauth-btn {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+
+.login-footer {
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  & a {
+    color: var(--color-primary100);
+    text-decoration: underline;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+
+  & .btn-visibility {
+    position: absolute;
+    bottom: 2.3rem; /* 이게 맞나 */
+    right: 1.5rem;
+  }
 }
